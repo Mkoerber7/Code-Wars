@@ -36,3 +36,28 @@ Kata = (function() {
 //=======================================================================================================
 
 
+// Your online store likes to give out coupons for special occasions. Some customers try to cheat the system by entering invalid codes or using expired coupons.
+
+//Your mission: 
+//Write a function called checkCoupon to verify that a coupon is valid and not expired. If the coupon is good, return true. Otherwise, return false.
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  let currDate = new Date(currentDate);
+  let expDate = new Date(expirationDate);
+  
+  if (enteredCode === correctCode && currDate <= expDate) {
+    return true;
+  } else {return false;}
+}
+
+//=======================================================================================================
+
+
+//In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+function filter_list(l) {
+  return l.reduce((a, b) => {
+    if (typeof b === 'number') a.push(b);
+    return a;
+  }, []);
+}
