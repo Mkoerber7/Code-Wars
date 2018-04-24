@@ -61,3 +61,25 @@ function filter_list(l) {
     return a;
   }, []);
 }
+
+//=======================================================================================================
+
+// Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+
+// The binary number returned should be a string.
+
+function addBinary(a,b) {
+  return (a + b).toString(2);
+}
+
+//=======================================================================================================
+
+// Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits. 
+
+function sumDigits(number) {
+  let arr = Math.abs(number).toString().split('')
+  let arrr = arr.map(parseFloat).reduce((a, b) => a + b);
+  return arrr;
+}
+
+//=======================================================================================================
