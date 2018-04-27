@@ -113,4 +113,30 @@ const reverseSeq = n => {
 
 //=======================================================================================================
 
+// An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+function isIsogram(str){
+  var i;
+  var j;
+  str = str.toLowerCase();
+
+  for(i = 0; i < str.length; ++i)
+    for(j = i + 1; j < str.length; ++j)
+      if(str[i] === str[j])
+        return false;
+  return true;
+}
+
+//=======================================================================================================
+
+// Let's assume that a song consists of some number of words. To make the dubstep remix of this song, Polycarpus inserts a certain number of words "WUB" before the first word of the song (the number may be zero), after the last word (the number may be zero), and between words (at least one between any pair of neighboring words), and then the boy glues together all the words, including "WUB", in one string and plays the song at the club.
+
+// For example, a song with words "I AM X" can transform into a dubstep remix as "WUBWUBIWUBAMWUBWUBX" and cannot transform into "WUBWUBIAMWUBX".
+
+function songDecoder(song){
+  song = song.replace(/(WUB)+/g, " ").trim()
+  return song;
+}
+
+//=======================================================================================================
 
