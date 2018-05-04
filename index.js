@@ -142,6 +142,10 @@ function songDecoder(song){
 
 // To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
 
+// Input will consist of a list of lists containing two items each. Each list contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+
+//Output will consist of a list of string values (in Haskell: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+
 function openOrSenior(data){
   let list = [];
     for (var i=0; i < data.length; i++) {
@@ -151,5 +155,25 @@ function openOrSenior(data){
     }
     return list;
   }
+
+//=======================================================================================================
+
+// Given a non-negative integer n, write a function toBinary/ToBinary which returns that number in a binary format.
+
+function toBinary(n){
+  return Number(n.toString(2));
+}
+
+//=======================================================================================================
+
+// Write function potatoes with
+
+// int parameter p0 - initial percent of water-
+// int parameter w0 - initial weight -
+// int parameter p1 - final percent of water -
+// potatoesshould return the final weight coming out of the oven w1 truncated as an int.
+
+let potatoes = (p0, w0, p1) => parseInt(w0 * ((100 - p0 )/( 100 - p1)));
+
 
 //=======================================================================================================
