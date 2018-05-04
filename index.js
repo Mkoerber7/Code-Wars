@@ -177,3 +177,31 @@ let potatoes = (p0, w0, p1) => parseInt(w0 * ((100 - p0 )/( 100 - p1)));
 
 
 //=======================================================================================================
+
+// Find the total sum of angles in an n sided shape. N will be greater than 2.
+
+let angle = n => 180 * (n - 2);
+
+//=======================================================================================================
+
+//Given an array of integers your solution should find the smallest integer.
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    let arr = args.sort((a, b) => a - b);
+      return arr[0];
+  }
+}
+
+//=======================================================================================================
+
+// You get an array of numbers, return the sum of all of the positives ones.
+
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+let positiveSum = (arr) => {
+  return !arr.length ? 0 : arr.reduce((c,i) => i > 0 ? c+i :c,0);
+}
+
+//=======================================================================================================
+
