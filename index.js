@@ -205,3 +205,53 @@ let positiveSum = (arr) => {
 
 //=======================================================================================================
 
+// All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+
+// Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+
+// Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+
+let feast = (b,d) =>  (b[0] === d[0] && b[b.length-1] === d[d.length-1]);
+
+//=======================================================================================================
+
+// You have to do God's job. The creation method must return an array of length 2 containing objects (representing Adam and Eve). The first object in the array should be an instance of the class Man. The second should be an instance of the class Woman. Both objects have to be subclasses of Human. Your job is to implement the Human, Man and Woman classes.
+
+class God{
+  /**
+   * @returns Human[]
+   */
+    static create(){
+      return [new Man("Adam"), new Woman("Eve")];
+    }
+  }
+  
+  class Human{
+    constructor(name) {
+      this.name = name;
+  }}
+  class Man extends Human{
+  constructor(name){
+    super(name)
+  }}
+  class Woman extends Human{
+  constructor(name){
+    super(name)
+  }}
+
+//=======================================================================================================
+
+// Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ().
+
+let expressionMatter = (a,b,c) => Math.max(a + b + c, a * (b + c), (a + b) * c, a * b * c);
+
+//=======================================================================================================
+
+
+
+
+
+
+
+
+
