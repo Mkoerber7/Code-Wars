@@ -247,11 +247,30 @@ let expressionMatter = (a,b,c) => Math.max(a + b + c, a * (b + c), (a + b) * c, 
 
 //=======================================================================================================
 
+// Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.
 
+var combat = (health, damage) => health - damage >= 1 ? health - damage : 0;
 
+//=======================================================================================================
 
+// Numbers ending with zeros are boring.
 
+// They might be fun in your world, but not here.
 
+// Get rid of them. Only the ending ones.
 
-
+function noBoringZeros(n) {
+  var str = n.toString()
+  var arr = str.split('')
+  if (arr[0] === '0'){
+    return parseInt(arr.join(''))
+  }
+  for (var i = arr.length-1; i > 0; i--){
+    if (arr[i] === '0' ){
+      arr.splice(i,1)
+    } else {
+      return parseInt(arr.join(''))
+    }
+  }
+}
 
