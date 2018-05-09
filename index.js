@@ -274,3 +274,58 @@ function noBoringZeros(n) {
   }
 }
 
+//=======================================================================================================
+
+//You will be given an vector of string(s). You must sort it alphabetically (case-sensitive!!) and then return the first value.
+
+//The returned value must be a string, and have "***" between each of its letters.
+
+//You should not remove or add elements from/to the array.
+
+
+function twoSort(s) {
+  return s.sort()[0].split('').join('***');
+}
+
+//=======================================================================================================
+
+//Create a function finalGrade, which calculates the final grade of a student depending on two parameters: a grade for the exam and a number of completed projects.
+
+//This function should take two arguments: exam - grade for exam (from 0 to 100); projects - number of completed projects (from 0 and above);
+
+function finalGrade (exam, projects) {
+  if (exam > 90 || projects > 10) {
+    return 100;
+  } else if (exam > 75 && projects >= 5) {
+    return 90;
+  } else if (exam > 50 && projects >= 2) {
+    return 75;
+  } else {return 0}
+}
+
+//=======================================================================================================
+
+//Write a function/method named isMadhavArray/IsMadhavArray/is_madhav_array() that returns true if its array argument is a Madhav array, otherwise it returns false.
+
+//A Madhav array a has the following property.
+
+// a[0] = a[1] + a[2] = a[3] + a[4] + a[5] = a[6] + a[7] + a[8] + a[9] = ...
+
+function isMadhavArray(arr){
+  if(arr.length < 3) return false;
+  var i = 1, counter = 2;
+  while(i<arr.length) {
+    var sum = 0;
+    for(var j=1; j <= counter; j++, i++)
+      sum += arr[i]; 
+    
+    if(sum !== arr[0])
+      return false
+    else counter++;
+  }
+  return true;
+ }
+
+ //=======================================================================================================
+
+ 
