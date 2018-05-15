@@ -407,3 +407,30 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
   // if the value returned from your distance to the boat divided by your speed is greater than the sharks, then you are shark bait.
   return pontoonDistance / youSpeed > sharkDistance / sharkSpeed ? "Shark Bait!" : "Alive!";
 };
+
+//=======================================================================================================
+
+// Write a function to split a string and convert it into an array of words. For example:
+// "Robin Singh" ==> ["Robin", "Singh"]
+// "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+var stringToArray = (str) => str.split(' '); // splits string into an array at the first index with a space
+
+//=======================================================================================================
+
+//Remove n exclamation marks in the sentence from left to right. n is positive integer.
+// Examples
+// remove("Hi!",1) === "Hi"
+// remove("Hi!",100) === "Hi"
+// remove("Hi!!!",1) === "Hi!!"
+// remove("Hi!!!",100) === "Hi"
+
+function remove(s, n) {
+  for (let i = 1; i <= n; i++) { // Loop over the string n amount of times to remove 1 ! each time.
+    s = s.replace('!', ''); //Removes the space containing a ! each time it loops
+  }
+  return s;
+}
+
+//=======================================================================================================
+
