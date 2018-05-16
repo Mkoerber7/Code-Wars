@@ -434,3 +434,15 @@ function remove(s, n) {
 
 //=======================================================================================================
 
+//Define a function that removes duplicates from an array of numbers and returns it as a result.
+// The order of the sequence has to stay the same.
+
+function distinct(a) {
+  let unique_array = a.filter(function(e, i, self) { // create a new array and if the index of the element in the original array equals the index return that value.
+        return i == self.indexOf(e);
+    });
+    return unique_array
+};
+
+//=======================================================================================================
+
