@@ -451,8 +451,33 @@ function distinct(a) {
 // The array will never be empty.
 
 function getAverage(marks){
-  let sum = marks.reduce((a, b) => a + b)/marks.length; // Sums up the marks array and divides them by the length of the array.
+  let sum = marks.reduce((a, b) => a + b) / marks.length; // Sums up the marks array and divides them by the length of the array.
   return Math.floor(sum); // rounds all decimals down
 }
 
 //=======================================================================================================
+
+// write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'.
+// the string should start with a 1.
+// a string with size 6 should return :'101010'.
+// with size 4 should return : '1010'.
+// with size 12 should return : '101010101010'.
+// The size will always be positive and will only use whole numbers.
+
+function stringy(size) {
+  var output = '1'
+  var counter = size + 1
+    if (size <= 0) {
+      return '';
+    }
+    while (counter > 1) {
+      if(counter % 2 === 0) {
+        output += '0'
+        counter--
+      } else {
+        output += '1'
+        counter--
+      }
+    }
+      return output.slice(0, -1);
+  }
