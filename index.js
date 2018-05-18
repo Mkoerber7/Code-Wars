@@ -465,19 +465,14 @@ function getAverage(marks){
 // The size will always be positive and will only use whole numbers.
 
 function stringy(size) {
-  var output = '1'
-  var counter = size + 1
-    if (size <= 0) {
-      return '';
-    }
-    while (counter > 1) {
-      if(counter % 2 === 0) {
-        output += '0'
-        counter--
-      } else {
-        output += '1'
-        counter--
-      }
-    }
-      return output.slice(0, -1);
+  string = "1"; // Starts the string with a 1
+  for (var i = 0; i < size-1; i++) {
+    if(i % 2 == 0)
+      string += "0"; //gives even indexes a 0
+    else
+      string += "1"; // gives odd indexes a 1
   }
+  return string;
+}
+
+//=======================================================================================================
