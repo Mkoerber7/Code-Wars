@@ -497,3 +497,8 @@ var isDivisible = (n, x, y) => {
 
 //=======================================================================================================
 
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+var fakeBin = (x) => {
+  return x.split('').map(function(e){return e < 5 ? 0: 1;}).join('');
+} // split the string and map over the array returning 0 for elements less than 5 else return 1 and join back to a string.
