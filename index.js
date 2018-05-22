@@ -502,3 +502,29 @@ var isDivisible = (n, x, y) => {
 var fakeBin = (x) => {
   return x.split('').map(function(e){return e < 5 ? 0: 1;}).join('');
 } // split the string and map over the array returning 0 for elements less than 5 else return 1 and join back to a string.
+
+//=======================================================================================================
+
+// Given an array of integers.
+// Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
+// If the input array is empty or null, return an empty array:
+
+function countPositivesSumNegatives(input) {
+  if (input === null || input.length === 0)
+    return []; // check if null or 0 and return an empty array
+  
+  var positive = 0; // create positive and negatives count and sum
+  var negative = 0;
+  
+  for (var i=0, l=input.length; i<l; ++i)
+  {
+    if (input[i] > 0)
+      ++ positive; // if value is less than zero add 1 to the positive counter
+    else
+      negative += input[i]; // if its negative add that value to the negative sum
+  }
+  
+  return [positive, negative]; // return both values as an array
+}
+
+//=======================================================================================================
