@@ -528,3 +528,24 @@ function countPositivesSumNegatives(input) {
 }
 
 //=======================================================================================================
+
+// Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
+
+String.prototype.toAlternatingCase = function() {
+  var output = ''; // create an empty string to set later.
+  for (var i = 0; i < this.length; i++) {
+    // since we are making a prototype we can use this to target the string.
+    if (this[i].toLowerCase() === this[i]) { // if the index changed to lowercase is equal to the original value of the index, than change it to uppercase in the output.
+      output = output + this[i].toUpperCase();
+    } else if (this[i].toUpperCase() === this[i]) { // if the index changed to uppercase is equal to the original value of the index, than change it to lowercase in the output. 
+      output = output + this[i].toLowerCase();
+    } else { // if there is a number or non alphabetical character than keep it the way it is.
+      output = output + this[i];
+    }
+  }
+  return output;
+}
+
+//=======================================================================================================
+
+
