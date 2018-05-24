@@ -559,3 +559,12 @@ function findNeedle(haystack) {
   return `found the needle at position ${index}`;// returns string with the index using string interpolation.
 }
 
+//=======================================================================================================
+
+// Complete the solution so that it reverses the string value passed into it.
+
+var solution = (str) => str.split('').reverse().join('');
+
+// chaining the split reverse and join string prototypes
+
+//=======================================================================================================
