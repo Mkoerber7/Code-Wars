@@ -582,12 +582,21 @@ const correct = string => {
   return string
     .split('')
     .map(char => {
-      if (char === '5') return 'S'
+      if (char === '5') return 'S' // make a copy of the array, if any input equals 5, 0, 1, return an S, O, I in its place
       if (char === '0') return 'O'
       if (char === '1') return 'I'
       return char
     })
-    .join('')
+    .join('') // join the array back into a string
 }
 
 //=======================================================================================================
+
+// Simple, remove the spaces from the string, then return the resultant string.
+
+function noSpace(x) {
+	return x.replace(/\s/g, ''); // Replaces any whitespace found in the string with nothing, essentially deleting it. Regex
+}
+
+//=======================================================================================================
+
