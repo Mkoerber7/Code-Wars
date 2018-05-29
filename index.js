@@ -613,3 +613,12 @@ var number = function(busStops){
 }
 
 //=======================================================================================================
+
+// Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+var replace = (s) => s.replace(/[aeiou]/gi,"!");
+
+// String.prototype.replace takes in a regular expression that selects any single character inside of [], case insensitive, and replaces them with an "!".
+
+//=======================================================================================================
+
