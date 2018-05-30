@@ -622,3 +622,15 @@ var replace = (s) => s.replace(/[aeiou]/gi,"!");
 
 //=======================================================================================================
 
+// You have to return the digits of this number within an array in reverse order.
+
+// Example:
+// 348597 => [7,9,5,8,4,3]
+
+const digitize = (n) => String(n).split('').reverse().map((x)=> Number(x));
+
+// Change the data type of n to a string so it can be split into an array and reversed. 
+// Map the array returning each elements data type turned back to a number in reverse order.
+
+//=======================================================================================================
+
