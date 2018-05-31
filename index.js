@@ -634,3 +634,89 @@ const digitize = (n) => String(n).split('').reverse().map((x)=> Number(x));
 
 //=======================================================================================================
 
+// 8 kyu
+// Sleigh Authentication
+
+// Christmas is coming and many people dreamed of having a ride with Santa's sleigh. But, of course, only Santa himself is allowed to use this wonderful transportation. And in order to make sure, that only he can board the sleigh, there's an authentication mechanism.
+
+// Your task is to implement the authenticate() method of the sleigh, which takes the name of the person, who wants to board the sleigh and a secret password. If, and only if, the name equals "Santa Claus" and the password is "Ho Ho Ho!" (yes, even Santa has a secret password with uppercase and lowercase letters and special characters :D), the return value must be true. Otherwise it should return false.
+
+function Sleigh() {}
+
+Sleigh.prototype.authenticate = function(name, password) {
+  return name === "Santa Claus" && password === "Ho Ho Ho!" ? true : false; 
+};
+
+//=======================================================================================================
+
+// 8 kyu
+// Convert boolean values to strings 'Yes' or 'No'.
+
+// Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+function boolToWord( bool ){
+  return bool === true ? "Yes" : "No";
+}
+
+//=======================================================================================================
+
+//8 kyu
+// Will you make it?
+
+// You were camping with your friends far away from home, but when it's time to go back, you realize that you fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. Considering these factors, write a function that tells you if it is possible to get to the pump or not. Function should return true if it is possible and false if not.
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return mpg * fuelLeft >= distanceToPump ? true : false;
+};
+
+//=======================================================================================================
+
+// 8 kyu
+// Sum of Multiples
+
+// Your Job
+// Find the sum of all multiples of n below m
+
+// Keep in Mind
+// n and m are natural numbers (positive integers)
+// m is excluded from the multiples
+
+const sumMul = (n, m) => {
+  if (n >= m) return 'INVALID' // Since we are using m as the ceiling, it must be greater than n or "INVALID"
+  const multiples = [] //Create an array to push values to
+  for (let i = n; i < m; i++) {
+    if (i % n === 0) multiples.push(i) // Create a loop where i is equal to the value of n and as long as it is less than m increment up my 1. to pick out the multiples, check if there is no remainder and push that number to the multiples array.
+  }
+  return multiples.reduce((total, value) => total + value, 0) // reduce the multiples array down, adding all values and return.
+}
+
+//=======================================================================================================
+
+// 8 kyu
+// Cat years, Dog years
+
+// I have a cat and a dog.
+
+// I got them at the same time as kitten/puppy. That was humanYears years ago.
+
+// Return their respective ages now as [humanYears,catYears,dogYears]
+
+// NOTES:
+
+// humanYears >= 1
+// Cat Years
+// 15 cat years for first year
+// +9 cat years for second year
+// +4 cat years for each year after that
+// Dog Years
+// 15 dog years for first year
+// +9 dog years for second year
+// +5 dog years for each year after that
+
+
+var humanYearsCatYearsDogYears = function(humanYears) {
+  return [humanYears,(humanYears - 1 ? 16 : 11 ) + 4 * humanYears,(humanYears > 1 ? 9 + (5 * (humanYears - 2)) : 0) + 15];
+} 
+
+//=======================================================================================================
+
