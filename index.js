@@ -833,3 +833,40 @@ function grader(score) {
 
 //=======================================================================================================
 
+// 8 kyu
+// Difference of Volumes of Cuboids
+
+// In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+
+// For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
+
+// Your function will be tested with pre-made examples as well as random ones.
+
+// If you can, try writing it in one line of code.
+
+const findDifference = (a, b) => Math.abs(a[0]*a[1]*a[2] - b[0]*b[1]*b[2]);
+
+//=======================================================================================================
+
+// 8 kyu
+// How good are you really?
+
+// There was a test in your class and you passed it. Congratulations!
+// But you're an ambitious person. You want to know if you're better than the average student in your class.
+// You got an array with your colleges' points. Now calculate the average to your points!
+
+// Return True if you're better, else False!
+
+// Note:
+// Your points are not included in the array of your classes points. For calculating the average point you may add your point to the given array!
+
+function betterThanAverage(classPoints, yourPoints) {
+  classPoints.push(yourPoints);
+  return yourPoints > classPoints.reduce((classAverage, grade) => classAverage + grade ) / classPoints.length;
+}
+
+//=======================================================================================================
+
+
+
+
