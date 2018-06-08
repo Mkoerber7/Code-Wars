@@ -904,3 +904,50 @@ const stringClean = (s) => s.replace(/\d+/g, '');
 
 
 //=======================================================================================================
+
+// 8 kyu
+// The falling speed of petals
+
+// When it's spring Japanese cherries blossom, it's called "sakura" and it's admired a lot. The petals start to fall in late April.
+
+// Suppose that the falling speed of a petal is 5 centimeters per second (5 cm/s), and it takes 80 seconds for the petal to reach the ground from a certain branch.
+
+// Write a function that receives the speed (in cm/s) of a petal as input, and returns the time it takes for that petal to reach the ground from the same branch.
+
+const sakuraFall = (v) => v > 0 ? 400/v : 0;
+
+//=======================================================================================================
+
+// 8 kyu
+// Returning Strings
+
+// Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+const greet = (name) => `Hello, ${name} how are you doing today?`;
+
+//=======================================================================================================
+
+// 8 kyu
+// Simple Fun #352: Reagent Formula
+
+// Now we will confect a reagent. There are eight materials to choose from, numbered 1,2,..., 8 respectively.
+
+// We know the rules of confect:
+
+// material1 and material2 cannot be selected at the same time
+// material3 and material4 cannot be selected at the same time
+// material5 and material6 must be selected at the same time
+// material7 or  material8 must be selected(at least one, or both)
+// Task
+// You are given a integer array formula. Array contains only digits 1-8 that represents material 1-8. Your task is to determine if the formula is valid. Returns true if it's valid, false otherwise.
+
+const isValid = formula => {
+  const firstRule = !(formula.includes(1) && formula.includes(2));
+  const secondRule = !(formula.includes(3) && formula.includes(4));
+  const thirdRule = formula.includes(5) === formula.includes(6);
+  const fourthRule = formula.includes(7) || formula.includes(8);
+  return firstRule && secondRule && thirdRule && fourthRule;
+}
+
+//=======================================================================================================
+
