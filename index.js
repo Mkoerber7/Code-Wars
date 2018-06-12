@@ -997,3 +997,31 @@ const bonusTime = (salary, bonus) => bonus === true ? "\u00A3" + salary * 10 : "
 const whoIsPaying = name => name.length <= 2 ? [name] : [name, name.substr(0, 2)];
 
 //=======================================================================================================
+
+// 8 kyu
+// Kata Example Twist
+
+// This is an easy twist to the example kata (provided by Codewars when learning how to create your own kata).
+
+// Add the value "codewars" to the array websites/Websites 1,000 times.
+
+var websites = []
+for(var i = 0; i < 1000; i++){
+  websites.push("codewars");
+}
+
+//=======================================================================================================
+
+// 8 kyu
+// Array plus array
+
+// I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. I'll appreciate for your help.
+
+// P.S. Each array includes only integer numbers. Output is a number too.
+
+function arrayPlusArray(arr1, arr2) {
+  return arr1.reduce((a, b) => a + b) + arr2.reduce((a, b) => a + b); //something went wrong
+};
+
+//=======================================================================================================
+
