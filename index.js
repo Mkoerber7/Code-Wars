@@ -1025,3 +1025,49 @@ function arrayPlusArray(arr1, arr2) {
 
 //=======================================================================================================
 
+// 8 kyu
+// Multiple of index
+
+// Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+
+function multipleOfIndex(array) {
+  return array.filter((e,i) => e % i === 0);
+}
+// if its a multiple the element divided by the index will return modulo 0.
+
+//=======================================================================================================
+
+// 8 kyu
+// Check the exam
+
+// The first input array contains the correct answers to an exam, like ["a", "a", "b", "d"]. The second one is "answers" array and contains student's answers.
+
+// The two arrays are not empty and are the same length. Return the score for this array of answers, giving +4 for each correct answer, -1 for each incorrect answer, and +0 for each blank answer(empty string).
+
+// If the score < 0, return 0.
+
+function checkExam(array1, array2) {
+  const score = array1.map((e,i) => array2[i] === "" ? 0 : e === array2[i] ? 4 : -1).reduce((a,b) => a+b,0);
+  return score > 0 ? score : 0;
+ };
+
+// for the score, check to see if theres is a blank answer at any index in array2, if so return 0. else if the element from array1 is strictly equal the value at any index in array2, return 4, if not return -1. then reduce those values down, leaving an initial value of 0 for score.
+
+// then return score if its greater than 0 or 0 if its is not.
+
+
+//=======================================================================================================
+
+// 8 kyu
+// Count Odd Numbers below n
+
+// Given a number n, return the number of positive odd numbers below n, EASY!
+
+// oddCount(7) //=> 3, i.e [1, 3, 5]
+// oddCount(15) //=> 7, i.e [1, 3, 5, 7, 9, 11, 13]
+// Expect large Inputs!
+
+const oddCount = (n) => Math.floor(n/2);
+
+//=======================================================================================================
+
