@@ -1071,3 +1071,34 @@ const oddCount = (n) => Math.floor(n/2);
 
 //=======================================================================================================
 
+// 8 kyu
+// Define a card suit
+
+// You get any card as an argument. Your task is to return a suit of this card.
+
+// Our deck (is preloaded):
+
+// ('3♣') -> return 'clubs'
+// ('3♦') -> return 'diamonds'
+// ('3♥') -> return 'hearts'
+// ('3♠') -> return 'spades'
+
+function defineSuit(card) {
+  let arr = card.split('').reverse();
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[0] === '♣'){
+      return 'clubs'
+    }
+    if(arr[0] === '♠'){
+      return 'spades'
+    }
+    if(arr[0] === '♦'){
+      return 'diamonds'
+    }
+    else {return 'hearts'}
+  }
+}
+
+//=======================================================================================================
+
+
