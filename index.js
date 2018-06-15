@@ -1101,4 +1101,42 @@ function defineSuit(card) {
 
 //=======================================================================================================
 
+// 8 kyu
+// Who ate the cookie?
+
+// For this problem you must create a program that says who ate the last cookie. If the input is a string then "Zach" ate the cookie. If the input is a float or an int then "Monica" ate the cookie. If the input is anything else "the dog" ate the cookie. The way to return the statement is: "Who ate the last cookie? It was (name)!"
+
+// Ex: Input = "hi" --> Output = "Who ate the last cookie? It was Zach! (The reason you return Zach is because the input is a string)
+
+// Note: Make sure you return the correct message with correct spaces and punctuation.
+
+function cookie(x){
+  const who = typeof x === "string" ? "Zach" : typeof x === "number" ? "Monica" : "the dog";
+  return `Who ate the last cookie? It was ${who}!`;
+}
+
+// String interpolation returning the string associated with the variable who
+
+//=======================================================================================================
+
+// 8 kyu
+// MakeUpperCase
+
+// Write function makeUpperCase.
+
+const makeUpperCase = str => str.toUpperCase();
+
+//=======================================================================================================
+
+// 8 kyu
+// Can we divide it?
+
+// Your task is to create functionisDivideBy (or is_divide_by) to check if an integer number is divisible by each out of two arguments.
+
+const isDivideBy = (number, a, b) => number % a === 0 && number % b === 0 ? true : false;
+
+//=======================================================================================================
+
+
+
 
