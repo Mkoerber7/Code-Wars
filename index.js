@@ -1160,3 +1160,34 @@ const cubeChecker = (volume, side) => volume > 0 ? volume === Math.pow(side, 3) 
 
 //=======================================================================================================
 
+// 8 kyu
+// Even or Odd
+
+// Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+const even_or_odd = (number) => number % 2 === 0 ? "Even" : "Odd";
+
+//=======================================================================================================
+
+
+// 8 kyu
+// USD => CNY
+
+// Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by 'Chinese Yuan'
+// The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers shold be reounded to the nearest hundreth (e.g. 21.00 NOT 21.0 or 21) (HINT: google toFixed)
+
+const usdcny = (usd) => `${(usd * 6.75).toFixed(2)} Chinese Yuan`;
+
+//=======================================================================================================
+
+// 8 kyu
+// Third Angle of a Triangle
+
+// You are given two angles (in degrees) of a triangle.
+// Write a function to return the 3rd.
+// Note: only positive integers will be tested.
+
+const otherAngle = (a, b) => 180 - (a+b);
+
+//=======================================================================================================
+
