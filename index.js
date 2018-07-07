@@ -1400,3 +1400,14 @@ const decodePass = ( passArr, bin ) => {
 
 //=======================================================================================================
 
+// 7 kyu
+// Price is right
+
+// Given an array of integers, and a target integer, return the largest integer from the array that is less than or equal to the target.
+// If there is no number that is less than or equal to the target number then return undefined.
+// The array of integers may be empty, but will always be an array.
+
+let priceIsRight = (numbers, target) => (target < Math.min(...numbers)) ? undefined : Math.max(...numbers.filter(a => a <= target));
+
+//=======================================================================================================
+
