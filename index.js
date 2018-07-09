@@ -1411,3 +1411,21 @@ let priceIsRight = (numbers, target) => (target < Math.min(...numbers)) ? undefi
 
 //=======================================================================================================
 
+
+// 7 kyu
+// Odd-Even String Sort
+
+// Given a string S. You have to return another string such that even-indexed and odd-indexed characters of S are grouped and groups are space-separated (see sample below)
+
+// Note: 
+// 0 is considered to be an even index. 
+// All input strings are valid with no spaces
+
+
+function sortMyString(S) {
+  let even = S.split('').filter((_,i) => i % 2).join(''),
+      odd = S.split('').filter((_,i) => !(i % 2)).join('');
+  return `${odd} ${even}`;
+}
+
+//=======================================================================================================
