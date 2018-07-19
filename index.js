@@ -1451,3 +1451,33 @@ function rowWeights(arr) {
 
 //=======================================================================================================
 
+// 7 kyu
+// Vowel Count
+
+// Return the number (count) of vowels in the given string.
+// We will consider a, e, i, o, and u as vowels for this Kata.
+// The input string will only consist of lower case letters and/or spaces.
+
+const getCount = (str) => {
+  let vowelsCount = 0;
+  let vowelArr = ['a', 'e', 'i', 'o', 'u'];
+  for (var i = 0; i < vowelArr.length; i++) {
+    for (var j = 0; j < str.length; j++) {
+      if (str[j] === vowelArr[i]) {
+          vowelsCount++;
+      }
+    }
+  }
+  return vowelsCount;
+}
+
+//Better soultions
+
+// function getCount(str) {
+//   return (str.match(/[aeiou]/ig)||[]).length;
+// }
+
+// const getCount = str => str.replace(/[^aeiou]/g, '').length;
+
+//=======================================================================================================
+
