@@ -1550,3 +1550,29 @@ function bubblesortOnce(intArr) {
 }
 
 //=======================================================================================================
+
+// 7 kyu
+// Every possible sum of two digits
+
+// Given a long number, return all the possible sum of two digits of it.
+
+// For example, 12345: all possible sum of two digits from that number are:
+
+// [ 1 + 2, 1 + 3, 1 + 4, 1 + 5, 2 + 3, 2 + 4, 2 + 5, 3 + 4, 3 + 5, 4 + 5 ]
+// Therefore the result must be:
+
+// [ 3, 4, 5, 6, 5, 6, 7, 7, 8, 9 ]
+
+function digits(num) {
+	let result = [];
+	let nums = num.toString().split('');          // Gotta change the number to a string to split it into an array.
+	for (let i = 0; i < nums.length; i++) {       // We use 2 for loops, the first for the number we are adding to.
+    for ( let index = i+1; index < nums.length; index++) {  // The second loop will start at that index + 1 and loop through to add every number in the array 
+      result.push(Number(nums[i]) + Number(nums[index])) // These sums will be pushed to the result array
+    }
+	}
+return result;
+}
+
+//=======================================================================================================
+
