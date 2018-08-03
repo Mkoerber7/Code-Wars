@@ -1576,3 +1576,14 @@ return result;
 
 //=======================================================================================================
 
+
+// 7 kyu
+// Form The Largest
+
+// Given a number , Return The Maximum number could be formed from the digits of the number given .
+
+let maxNumber = n => +[...''+n].sort().reverse().join('');
+
+// [...''+n] Uses spread operator to insert the number into the array, then adding '' to the number acts like .split()
+
+//=======================================================================================================
